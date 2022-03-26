@@ -10,7 +10,7 @@ spec:
   containers:
     - name: test-container
       image: k8s.gcr.io/busybox
-      command: [ "/bin/sh", "-c", "sleep 10000000" ]
+      command: [ "/bin/sh", "-c", "while : do sleep 1 done" ]
       envFrom:
       - secretRef:
           name: test-secret
